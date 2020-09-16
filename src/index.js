@@ -1,2 +1,6 @@
 import m from "mithril";
-m.render(document.body, "hello world");
+var MyComponent = require("./mycomponent")
+
+m.mount(document.body, MyComponent)
+
+// m.render(document.body, "hello world");
