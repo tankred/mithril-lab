@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack src/index.js --output bin/app.js -d --watch",
+    "startwebpack": "webpack src/index.js --output bin/app.js -d --watch",
+    "start": "budo --live --open src/index.js",
     "build": "webpack src/index.js --output bin/app.js -p"
   },
   "keywords": [],
@@ -15,6 +16,7 @@
     "mithril": "^2.0.4"
   },
   "devDependencies": {
+    "budo": "^11.6.4",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12"
   }

@@ -1,4 +1,4 @@
 // mycomponent.js
 module.exports = {
-    view: function() {return "hello from a module"}
+    view: function() {return "hello from a module (npm start using budo)"}
 }
