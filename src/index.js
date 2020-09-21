@@ -1,6 +1,6 @@
-import m from "mithril";
-var MyComponent = require("./mycomponent")
+//
+var m = require("mithril")
 
-m.mount(document.body, MyComponent)
+var UserList = require("./views/UserList")
 
-// m.render(document.body, "hello world");
+m.mount(document.body, UserList)
