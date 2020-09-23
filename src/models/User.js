@@ -3,15 +3,26 @@ var m = require("mithril")
 
 var User = {
     list: [],
-  loadList: function() {
-     // make XHR call
-     return m.request({
+    loadList: function() {
+        return m.request({
             method: "GET",
             url: "https://rem-rest-api.herokuapp.com/api/users",
-            withCredentials: true, //we're using cookies (which is a requirement for the REM API)
+            withCredentials: true,
         })
         .then(function(result) {
             User.list = result.data
+        })
+    },
+
+    current: {},
+    load: function(id) {
+        return m.request({
+            method: "GET",
+            url: "https://rem-rest-api.herokuapp.com/api/users/" + id,
+            withCredentials: true,
+        })
+        .then(function(result) {
+            User.current = result
         })
     }
 }

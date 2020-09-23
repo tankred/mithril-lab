@@ -3,10 +3,13 @@ var m = require("mithril")
 var User = require("../models/User")
 
 module.exports = {
-  oninit: User.loadList,
+    oninit: User.loadList,
     view: function() {
-      return m(".user-list", User.list.map(function(user) {
-            return m(".user-list-item", user.firstName + " " + user.lastName)
+        return m(".user-list", User.list.map(function(user) {
+            return m(m.route.Link, {
+                class: "user-list-item",
+                href: "/edit/" + user.id,
+            }, user.firstName + " AAA " + user.lastName)
         }))
     }
 }
