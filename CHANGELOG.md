@@ -8,6 +8,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Released]
 
+## [0.4.0] - 2020-09-24
+### Changed
+- Add info on Mithril
+
 ## [0.3.0] - 2020-09-18
 ### Changed
 - Alternate ways to use Mithril
